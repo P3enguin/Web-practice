@@ -1,0 +1,53 @@
+
+.header {
+    background-color: #1f2937;
+}
+
+.logo {
+    color :white;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap : 16px;
+    font-size: large;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-up{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main-text{
+    color: #f9faf8;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.header-description {
+    color: #e5e7eb
+}
+
+.header-content-body{
+    display : flex;
+}
+
+.header-content-body-one{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-image {
+    border-color: #8daedd;
+    color: #f9faf8;
+    width: 500px;
+    background: #6b9c3b;
+
+}
