@@ -1,8 +1,10 @@
 
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -18,70 +20,68 @@ body {
     justify-content: space-between;
     margin-bottom: 70px;
     margin-top: 3px; 
-
 }
 
-.logo {
-    color :white;
-    padding-top: 15px;
-    
+.logo-img {
+    height: auto;
+    width: 100px;
 }
 
 .header-links {
     list-style-type: none;
     display: flex;
     gap : 16px;
-    font-size: 13px;
+    
+    font-size: 20px;
 
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(176, 173, 173);
 }
 
 .header-content-body{
     display : flex;
+    justify-content: center;
+
 }
 
 .header-content-body-one{
     display: flex;
     flex-direction: column;
-    padding-right: 30px;
+    max-width: 500px;
 }
 
 .header-main-text{
     color: #f9faf8;
     font-weight: bolder;
     font-size: 40px;
-    flex-shrink: 0;
+    margin : 0;
+    
 }
-
 
 .header-description {
     color: #e5e7eb;
-    font-size:15px;
+    font-size:18px;
     flex-shrink: 0;
+    display: block;
+
 }
 
 .header-button  {
     border: none;
-    border-radius: 90px;
-    border-color: #f9faf8;
+    border-radius: 25px;
     margin-right: 20px;
-    width: 90px;
-    padding: 8px;
+    width: 80px;
+    padding: 5px;
     margin-top: 10px;
+    font-size: 13px;
+    background-color: #2196f3;
 }
-
-
 
 .header-image {
     border-color: #8daedd;
-    color: #fffdfd;
-    width: 400px;
-    background: #302f2f;
-
 }
 
 /* middle */
@@ -175,7 +175,7 @@ a {
 .middle-third-button {
     color: white;
     border-color: white;
-    background-color: #1660c8;
+    background-color: #2196f3;
     justify-self: center;
 }
 
@@ -183,7 +183,9 @@ a {
 .bottom {
     background: #394049;
     text-align: center;
+    justify-content: flex-end;
 }
+
 .bottom p {
     color: white;
 }
