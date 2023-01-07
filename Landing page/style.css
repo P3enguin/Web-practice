@@ -100,30 +100,24 @@ a {
 }
 
 .random-info {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
     align-self: center;
     padding-top: 30px;
     padding-bottom: 20px;
 }
 
-.body-illustration,.illustration-description {
-    list-style: none;
+.illustration {
     display: flex;
-
-}
-
-.body-illustration {
-    justify-content: space-around;
     gap : 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
 }
 
-.ill {
-    width: 130px;
-    height: 130px;
-    border: 3px solid rgb(50, 115, 214);
-    border-radius: 10px;
-
+.vid-desc {
+    text-align: center;
+    color: #333537;
 }
 /* middle second */
 
