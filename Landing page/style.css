@@ -94,22 +94,96 @@ a {
 .middle-content-one {
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
+    padding-left: 180px;
+    padding-right: 180px;
 }
 
 .random-info {
     font-size: 20px;
+    font-weight: bold;
     align-self: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .body-illustration,.illustration-description {
     list-style: none;
     display: flex;
 
-
 }
 
 .body-illustration {
     justify-content: space-around;
-    gap : 15px;
+    gap : 16px;
 }
 
+.ill {
+    width: 130px;
+    height: 130px;
+    border: 3px solid rgb(50, 115, 214);
+    border-radius: 10px;
+
+}
+/* middle second */
+
+.middle-content-second {
+    display:flex;
+    flex-direction: column;
+    background: #8daedd;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.inspiring-quote {
+    font-size: 20px;
+}
+.quote-credits {
+    font-size: 20px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/* middle third */
+
+.middle-content-third-content {
+    display: flex;
+    justify-content: center;
+    background: #1660c8;
+    border: #1f2937;
+    border-radius: 10px;
+    margin: 100px;
+}
+
+.paragraph-1{
+    color: white;
+    font-size: large;
+    margin-bottom: 0;
+}
+.paragraph-2{
+    color: white;
+    margin-top: 0;
+}
+
+.middle-third-button-container {
+    align-self: center;
+    padding: 10px;
+}
+
+.middle-third-button {
+    color: white;
+    border-color: white;
+    background-color: #1660c8;
+    justify-self: center;
+}
+
+/*bottom*/
+.bottom {
+    background: #394049;
+    text-align: center;
+}
+.bottom p {
+    color: white;
+}
