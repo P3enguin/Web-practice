@@ -115,6 +115,12 @@ a {
     
 }
 
+.vids {
+    border: 3px solid rgb(0, 132, 255);
+    border-radius: 5px;
+    padding : 10px;
+}
+
 .vid-desc {
     text-align: center;
     color: #333537;
@@ -144,20 +150,23 @@ a {
 
 .middle-content-third-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background: #1660c8;
     border: #1f2937;
     border-radius: 10px;
-    margin: 100px;
+    margin : 80px 170px 80px 170px;
+    padding : 30px;
 }
 
 .paragraph-1{
     color: white;
-    font-size: large;
+    font-size: 20px;
     margin-bottom: 0;
 }
 .paragraph-2{
-    color: white;
+    color: rgb(204, 197, 197);
+    font-size: 12px;
+    opacity: 0.7;
     margin-top: 0;
 }
 
@@ -167,7 +176,12 @@ a {
 }
 
 .middle-third-button {
+
+    border : 3px white;
+    border-radius: 10px;
     color: white;
+    font-size: 20px;
+    padding : 4px 12px 4px 12px;
     border-color: white;
     background-color: #2196f3;
     justify-self: center;
