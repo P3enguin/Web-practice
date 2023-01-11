@@ -10,14 +10,14 @@ body {
     align-items: center;
 ;}
 
-.intro{
+.intro,.result{
     text-align: center;
 }
 .intro.head {
     font-size: 60px;
 }
 
-.intro.text {
+.text {
     font-size:30px;
 }
 

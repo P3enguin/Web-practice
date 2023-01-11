@@ -12,7 +12,7 @@ function playRound(playerSelection,computerSelection){
 
         /* Checking only the wining condition  */
         else if ((playerSelection.toLowerCase() === option[0] 
-            && computerSelection === option[1]) 
+            && computerSelection === option[2]) 
             || (playerSelection.toLowerCase() === option[1] 
             && computerSelection === option[0])
             || (playerSelection.toLowerCase() === option[2] 
@@ -25,8 +25,9 @@ function playRound(playerSelection,computerSelection){
 function announceResult(e) {
     let computerChoice = getComputerChoice();
     let par = document.querySelector('.computer');
-    par.innerHTML = "computer";
-    // playRound(e.classList.value,computerChoice);
+    let result = document.querySelector('.annouce');
+    par.innerHTML = "computer choice : " + computerChoice;
+    result.innerHTML = playRound(this.classList.value,computerChoice);
 
 }
 
