@@ -9,7 +9,6 @@ function getComputerChoice(){
 function playRound(playerSelection,computerSelection){
         if (playerSelection.toLowerCase() === computerSelection)
             return "It's a draw";
-
         /* Checking only the wining condition  */
         else if ((playerSelection.toLowerCase() === option[0] 
             && computerSelection === option[2]) 
