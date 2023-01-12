@@ -7,22 +7,31 @@ h1 {
     text-align: center;
 }
 
+:root {
+    --row-numbers: 16;
+    --row-columns: 16;
+}
+
 .container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    /* justify-content: center; */
     max-width: 800px;
     width: 80%;
+    grid-template-columns: repeat(var(--row-columns),1fr);
+    grid-template-rows: repeat(var(--row-numbers),1fr) ;
     height: auto;
+
     border: 0.1px solid rgb(0, 0, 0);
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin : 70px;
 }
 
 .square {
-    width: 6.25%;
-    height: 6.25%;
-    padding: 2.5%;
+    /* width: 6.25%; */
+    /* height: 6.25%; */
+    /* padding: 2.25%; */
     color: black;
+    padding: 1em;
     border: 0.1px solid black;
     background: white;
     transition: all .2s;
