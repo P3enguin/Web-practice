@@ -1,5 +1,5 @@
 /* function that return a random from one of the three options */
-const option = ["rock", "paper", "scissors"];
+const option = ["rock", "paper", "scissor"];
 
 function getComputerChoice(){
     return option[parseInt(Math.random() * 3)];
