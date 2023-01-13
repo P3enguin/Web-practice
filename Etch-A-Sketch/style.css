@@ -1,33 +1,31 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
-}
-
+  }
 
 h1 {
     text-align: center;
 }
 
 :root {
-    --columns-numbers: 16;
-    --row-numbers: 16;
+    --grid-size: 16;
 }
+
+
 
 .container {
     display: grid;
-    /* justify-content: center; */
-    max-width: 800px;
-    width: 80%;
-    height: auto;
-    grid-template-columns: repeat(var(--columns-numbers),1fr);
-    grid-template-rows: repeat(var(--row-numbers),1fr) ;
+    width: 600px;
+    height: 600px;
+    padding : 10px;
 
+    grid-template-columns: repeat(var(--grid-size),1fr);
+    grid-template-rows: repeat(var(--grid-size),1fr) ;
     border: 0.1px solid rgb(0, 0, 0);
-    margin : 70px;
 }
 
 .square {
+
     color: black;
-    padding: 1em;
     border: 0.1px solid black;
     background: white;
     transition: all .2s;
@@ -36,3 +34,4 @@ h1 {
 .drawing{
     background: black;
 }
+

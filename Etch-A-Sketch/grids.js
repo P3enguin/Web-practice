@@ -1,20 +1,29 @@
 
+function draw(e){
+    let sqr = document.querySelectorAll('.square');
+    
+    sqr.addEventListener('click',function(e) {
+        sqr.classList.add('drawing');
+    })
+}
 
-function drawGrid(rows,columns)
+let gridSize = document.querySelector(':root');
+
+function drawGrid(size)
 {
     let grid = document.querySelector('.container');
 
-    grid.style.setProperty('--columns-numbers',columns);
-    grid.style.setProperty('--row-numbers',rows);
-    
-    for (let i = 0 ; i < rows*columns ; i++)
+    gridSize.style.setProperty('--grid-size',size);
+    for (let i = 0 ; i < size*size ; i++)
     {
         let elem = document.createElement('div');
         elem.classList.add('square');
         grid.appendChild(elem);
     }
-}
+
+    grid.addEventListener('mouseover',draw );
     
 
+}
 
-drawGrid(16,16);
+drawGrid(16);
