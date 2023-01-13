@@ -8,9 +8,16 @@ h1 {
 
 :root {
     --grid-size: 16;
+    --color-value: #ffffff; 
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
 
+}
 
 .container {
     display: grid;
@@ -27,7 +34,7 @@ h1 {
 
     color: black;
     border: 0.1px solid black;
-    background: white;
+    background: var(--color-value);
     transition: all .2s;
 }
 

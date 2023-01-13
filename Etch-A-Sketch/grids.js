@@ -1,19 +1,29 @@
+const gridContainer = document.querySelector('.container');
+let gridSizeVariable = document.querySelector(':root');
+let flag = false;
 
-function draw(e){
-    let sqr = document.querySelectorAll('.square');
-    
-    sqr.addEventListener('click',function(e) {
-        sqr.classList.add('drawing');
-    })
+
+function draw(){
+    console.log(this);
+    console.log(flag);
+    if (!flag)
+        return;
+    this.classList.add('drawing');
 }
 
-let gridSize = document.querySelector(':root');
 
-function drawGrid(size)
-{
+gridContainer.addEventListener('mousedown',function(){
+    flag = true;
+})
+
+gridContainer.addEventListener('mouseup',function(){
+    flag = false;
+})
+
+function drawGrid(size){
     let grid = document.querySelector('.container');
 
-    gridSize.style.setProperty('--grid-size',size);
+    gridSizeVariable.style.setProperty('--grid-size',size);
     for (let i = 0 ; i < size*size ; i++)
     {
         let elem = document.createElement('div');
@@ -21,9 +31,15 @@ function drawGrid(size)
         grid.appendChild(elem);
     }
 
-    grid.addEventListener('mouseover',draw );
+    let sqr = document.querySelectorAll('.square');
     
 
+    sqr.forEach(elem => elem.addEventListener('mouseover',draw));
+    /*Triggering the first click*/
+    sqr.forEach(elem2 => elem2.addEventListener('mousedown',function() {
+        elem2.classList.add('drawing');
+    }));
+ 
 }
 
 drawGrid(16);

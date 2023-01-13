@@ -7,11 +7,21 @@ function removeGrid()
     
 }
 
-let button = document.querySelector('button');
+let button1 = document.querySelector('#btn1');
+let button2 = document.querySelector('#btn2');
 
-button.addEventListener('click', function(e) {
+button1.addEventListener('click', function(e) {
     let nbr = prompt("give a number");
+    if (!nbr)
+        return;
     console.log(nbr);
     removeGrid();
     drawGrid(nbr);
+});
+
+button2.addEventListener('click',function(e) {
+    let drawing = document.querySelectorAll('div');
+    drawing.forEach((elem) => {
+        elem.classList.remove('drawing');
+    })
 });
