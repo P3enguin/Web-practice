@@ -20,8 +20,9 @@ button1.addEventListener('click', function(e) {
 });
 
 button2.addEventListener('click',function(e) {
-    let drawing = document.querySelectorAll('div');
+    let drawing = document.querySelectorAll('.square');
+    console.log(drawing);
     drawing.forEach((elem) => {
-        elem.classList.remove('drawing');
+        elem.style.background = "white";
     })
 });

@@ -1,16 +1,19 @@
 const gridContainer = document.querySelector('.container');
 let gridSizeVariable = document.querySelector(':root');
+let colorPal = document.getElementById('color-picker');
 let flag = false;
 
 
 function draw(){
-    console.log(this);
-    console.log(flag);
     if (!flag)
         return;
-    this.classList.add('drawing');
+    this.style.background = colorPal.value;
 }
 
+
+function drawClick() {
+   this.style.background = colorPal.value;
+}
 
 gridContainer.addEventListener('mousedown',function(){
     flag = true;
@@ -36,9 +39,7 @@ function drawGrid(size){
 
     sqr.forEach(elem => elem.addEventListener('mouseover',draw));
     /*Triggering the first click*/
-    sqr.forEach(elem2 => elem2.addEventListener('mousedown',function() {
-        elem2.classList.add('drawing');
-    }));
+    sqr.forEach(elem2 => elem2.addEventListener('mousedown',drawClick));
  
 }
 
