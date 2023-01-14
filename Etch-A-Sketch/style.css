@@ -1,12 +1,12 @@
 *, *::before, *::after {
     box-sizing: border-box;
+    font-family: 'Handlee';
+    color: #4D4861;
   }
 
 h1 {
-    font-family: 'Handlee';
     font-size: 60px;
     text-align: center;
-    color: #4D4861;
 }
 
 :root {
@@ -25,13 +25,14 @@ body {
 .etch {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     padding: 30px;
 }
 
 .option-bar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    width: 70%;
     /* background: #605770; */
 }
 
@@ -94,14 +95,42 @@ button:hover{
     border-radius: 6px;
 }
 
+
+#slider{
+    width: 60%; 
+    margin: 20px;
+    align-self: center;
+    cursor: pointer;
+    background: #4D4861;
+    color: #9E7682;
+    margin-top: 8px;
+
+}
+
 .square {
     color: black;
     border: 0.1px solid black;
     background: var(--color-value);
     transition: all .2s;
+   
 }
 
 .drawing{
     background: black;
 }
+
+.text,.grid-value{
+    font-size: 24px;
+    font-weight: bold;
+}
+.text{
+    margin-bottom: 0;
+  
+    
+}
+
+.grid-value {
+    margin:0;
+}
+
 

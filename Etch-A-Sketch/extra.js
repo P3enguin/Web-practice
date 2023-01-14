@@ -7,22 +7,21 @@ function removeGrid()
     
 }
 
-let button1 = document.querySelector('#btn1');
-let button2 = document.querySelector('#btn2');
 
-button1.addEventListener('click', function(e) {
-    let nbr = prompt("give a number");
-    if (!nbr)
-        return;
-    console.log(nbr);
-    removeGrid();
-    drawGrid(nbr);
-});
+let button = document.querySelector('#btn2');
+let slider = document.querySelector("#slider");
 
-button2.addEventListener('click',function(e) {
+
+button.addEventListener('click',function(e) {
     let drawing = document.querySelectorAll('.square');
-    console.log(drawing);
+
     drawing.forEach((elem) => {
         elem.style.background = "white";
     })
+});
+
+slider.addEventListener('mouseup',function(e) {
+    removeGrid();
+    drawGrid(parseInt(slider.value));
+    document.querySelector(".grid-value").innerHTML = `${slider.value}x${slider.value}`;
 });
