@@ -12,7 +12,7 @@ class Overview extends Component {
             <ul>
                 {
                     this.props.tasks.map((task) =>{
-                        return<li>{task}</li>
+                        return <li key={task.id} >{task.text}</li>
                     })
                 }
             </ul>
