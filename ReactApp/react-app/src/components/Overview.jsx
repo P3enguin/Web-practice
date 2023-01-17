@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 
 class Overview extends Component {
 
-    // constructor(props){
-    //     super(props);
-    // }
-
+ 
     render(){
+        const {tasks} = this.props;
         return (
             <ul>
-                {
-                    this.props.tasks.map((task) =>{
-                        return <li key={task.id} >{task.text}</li>
-                    })
-                }
+                {tasks.map((task) =>{
+                    return (
+                        <li key={task.id}>
+                        <button onClick={() => this.props.onClick(task.index)}> delete </button>
+                        {task.index}- {task.text} 
+                        </li>
+                    )})}
             </ul>
         );
     }   
