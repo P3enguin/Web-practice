@@ -1,30 +1,43 @@
 import React, { Component } from 'react';
+import Overview from './components/Overview';
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.onClickBtn() = this.onClickBtn.bind(this);
-        this.state = {value: ''};
-
+    constructor (){
+        super();
+        this.state = {
+            task : '',
+            tasks : [],
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleInput = this.handleInput.bind(this);
     }
 
-    handleChange(event){
-        this.setState({value: event.target.value});
+    handleInput(event){
+        this.setState({task:event.target.value});
     }
-    // onClickBtn() {
-    //     console.log("clicked");
-    // }
 
-
-    render() { 
-        return (<form>
-                <label>
-                    Tasks:
-                    <input type="text" value={this.state.value} onChange={this.handleChange}/>
-                </label>
-                <input type="submit" value="Submit" />
-          </form>);
+    handleSubmit(event){
+        event.preventDefault();
+        this.setState({
+            tasks: this.state.tasks.concat(this.state.task),
+            task : '',
+        })
+    
     }
+
+    render() {
+        return (
+            <div>
+                <form onSubmit={this.handleSubmit}>
+                    <label htmlFor='taskInput'>Enter task</label>
+                    <input type="text" id="taskInput" onChange={this.handleInput}></input>
+                    <button type="submit" >Submit</button>
+                </form>
+                <Overview tasks={this.state.tasks}/>
+            </div>
+        )
+    }
+
 }
  
 export default App;
