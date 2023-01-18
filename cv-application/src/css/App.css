@@ -1,14 +1,29 @@
 
 .main-container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
     gap: 16px;
 }
 
 .cv-info {
     border: 5px solid black;
+    max-width: 500px;
 }
 
 .cv-result {
     border: 5px solid black;
+    max-width: 800px;
+}
+
+/* .cv-info {
+    display: flex;
+    flex-direction: column;
+  
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+
 }

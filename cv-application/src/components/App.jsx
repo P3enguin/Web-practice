@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CvInfo from './cvInfo';
-import CvResult from './cvResult';
+import CvInfo from './CvInfo';
+import CvResult from './CvResult';
 
 class App extends Component {
     state = {  } 
