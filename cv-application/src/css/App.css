@@ -1,0 +1,14 @@
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+}
+
+.cv-info {
+    border: 5px solid black;
+}
+
+.cv-result {
+    border: 5px solid black;
+}
