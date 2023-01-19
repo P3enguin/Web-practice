@@ -2,42 +2,30 @@ import React from "react";
 import Input from "./InputComponents";
 import CvInfo from "./CvInfo";
 
-function CvResult() {
-    const [state,setValue] = React.useState({
-        fullName: "",
-        phone: "",
-        email: "",
-        link: "",
-        schoolName: "",
-        major: "",
-        dateSchool: "",
-        companyName: "",
-        positionTitle: "",
-        mainTask: "",
-        dateWork: ""
-    })
+function CvResult(props) {
 
+    let {vars} = props;
     return (<div className='cv-result container'>
             <div className="result pic">
                 <img src="" alt="profile-pic" 
                 className="result profile-result"></img>
             </div>
             <div className="result general-result">
-                <p>{state.fullName}</p>
-                <p>{state.phone}</p>
-                <p>{state.email}</p>
-                <p>{state.link}</p>
+                <p>{vars.fullName}</p>
+                <p>{vars.phone}</p>
+                <p>{vars.email}</p>
+                <p>{vars.link}</p>
             </div>
             <div className="result study-result">
-                <p>{state.schoolName}</p>
-                <p>{state.major}</p>
-                <p>{state.dateSchool}</p>
+                <p>{vars.schoolName}</p>
+                <p>{vars.major}</p>
+                <p>{vars.dateSchool}</p>
             </div>
             <div className="result work-result">
-                <p>{state.companyName}</p>
-                <p>{state.positionTitle}</p>
-                <p>{state.mainTask}</p>
-                <p>{state.dateWork}</p>
+                <p>{vars.companyName}</p>
+                <p>{vars.positionTitle}</p>
+                <p>{vars.mainTask}</p>
+                <p>{vars.dateWork}</p>
             </div>
         </div>
     );
