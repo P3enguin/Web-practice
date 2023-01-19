@@ -1,5 +1,4 @@
 
-
 function Input(props) {
 
     return (<div className='input-field'>
