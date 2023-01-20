@@ -18,11 +18,14 @@ function App() {
 
     })
 
+    function changeValue(id,value) {
+        setValue({...vars,[id]: value});
+    };
 
     return (
     <div className='main-container'>
-        <CvResult vars={vars} setValue={setValue}/>
-        <CvInfo vars={vars} setValue={setValue}/>
+        <CvResult vars={vars} changeValue={changeValue}/>
+        <CvInfo vars={vars} changeValue={changeValue}/>
     </div>);
 }
  

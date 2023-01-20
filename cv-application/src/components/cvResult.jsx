@@ -1,6 +1,5 @@
 import React from "react";
-import Input from "./InputComponents";
-import CvInfo from "./CvInfo";
+
 
 function CvResult(props) {
 
